@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!-- https://github.com/jkymarsh/flappyBirdClone -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAPE TAUPE</title>
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" media="screen">
+    <link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <script src="bootstrap/js/jquery.js"></script>
+</head>
+<style>
+    html, body {
+        margin:0;
+        padding:0;
+        background-color: #000000;
+        height: 100%;
+        width: 100%;
+        overflow:hidden;
+    }
+
+    canvas {
+        background-image:url(img/grass.jpg);
+    }
+
+
+
+</style>
+
+
+<body id="body">
+<script id="page-liste-score">
+    <div class="container" style="text-align:center;overflow: scroll;height:100%;"> <!-- Conteneur principal -->
+            <div class="row"><!-- Premiere ligne -->
+            <div class="col-md-12"><!-- Premiere Colonne -->
+    <h1 style = "color:#FFFFFF;">Liste des scores</h1>
+
+    <ul class="list-group" id="liste-score"></ul>
+    <a href="" ><span class="glyphicon glyphicon-chevron-left">RETOUR</span></a>
+
+   </div>
+            </div>
+    </div>
+</script>
+
+<script id="item-liste-score">
+
+
+            <div class="row"><!-- Premiere ligne -->
+            <div class="col-md-12"><!-- Premiere Colonne -->
+
+
+
+            <li class="list-group-item">
+            <span class="badge"><h4 id= "titre">{SCORE}</h4></span>
+            <h3 id= "titre" >{NOM}</h3>
+    </li>
+
+
+
+
+    </div>
+            </div>
+
+
+
+
+
+
+</script>
+
+<script id="apropos">
+    <div class="container" style="text-align:center;overflow: scroll;height:100%;"> <!-- Conteneur principal -->
+            <div class="row"><!-- Premiere ligne -->
+            <div class="col-md-12"><!-- Premiere Colonne -->
+
+    <div class="panel panel-success">  Fonctionnement du jeu : </br>
+            Taper sur les taupes avant qu' elles ne rentrent dans leurs terriers
+    </br>Jeu réaliser par
+   </br>Morgane CABROL et Alexandre NOTTET</div>
+    <a href="" ><span class="glyphicon glyphicon-chevron-left">RETOUR</span></a>
+            </div>
+    </div>
+    </div>
+
+</script>
+
+
+
+<script id="jeu">
+    <canvas id="canvasId" ></canvas>
+
+</script>
+
+
+<script id="Acceuil">
+    <div class="container" style="text-align:center;"> <!-- Conteneur principal -->
+            <div class="row"><!-- Premiere ligne -->
+                <div class="col-md-12"><!-- Premiere Colonne -->
+                    <button type="button" class="btn btn-success btn-lg"> <a onclick="window.location.hash='#Jouer'" style="color:white;">JOUER<span class="glyphicon glyphicon-chevron-right"></span></a></button>
+
+
+                </div>
+            </div>
+            <div class="row"><!-- deuxiemeligne ligne -->
+                <div class="col-md-12"><!-- deuxieme Colonne -->
+                    <button type="button" class="btn btn-success btn-lg"><a onclick="window.location.hash='#Score'" style="color:white;">SCORES<span class="glyphicon glyphicon-chevron-right"></span></a></button>
+            </div>
+            </div>
+    <div class="row"><!-- deuxiemeligne ligne -->
+            <div class="col-md-12"><!-- deuxieme Colonne -->
+            <button type="button" class="btn btn-success btn-lg"><a onclick="window.location.hash='#apropos'" style="color:white;">À PROPOS<span class="glyphicon glyphicon-chevron-right"></span></a></button>
+    </div>
+    </div>
+    </div>
+</script>
+
+<script src="lib/createjs-2013.12.12.min.js"></script>
+<script src="lib/jquery.js"></script>
+<script src="donnees/TapTaupeDAO.js"></script>
+<script src="action/administrationScoreAction.js"></script>
+<script src="modele/Score.js"></script>
+<script src="vue/AjouterScore.js"></script>
+<script src="vue/ListeScore.js"></script>
+<script src="js/jeu.js"></script>
+<script src="js/taupe.js"></script>
+<script src="vue/AcceuilVue.js"></script>
+<script src="vue/AProposVue.js"></script>
+<script src="vue/jeuxVue.js"></script>
+<script src="js/initialisation.js"></script>
+<script src="action/Application.js"></script>
+
+
+
+</body>
+</html>
